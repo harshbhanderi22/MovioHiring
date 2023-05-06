@@ -31,7 +31,9 @@ class MyApp extends StatelessWidget {
         body: Column(
           children: [
             for (int i = 0; i < 3; i++)
-              Column(
+            Container(
+            height: Mediaquery.of(context).size.height/3;
+              child: Column(
                 children: [
                   Text(
                     "Set ${i}",
@@ -49,6 +51,7 @@ class MyApp extends StatelessWidget {
                     ),
                   ),
                 ],
+                ),
               ),
           ],
         ),
